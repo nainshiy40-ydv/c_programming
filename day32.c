@@ -1,67 +1,41 @@
 #include <stdio.h>
-int a,b;
+
+int a, b;   // Global variables
+
 void compare()
 {
-    if (a>b)
+    if (a > b)
     {
-        printf("%d is the largest\n",a);
-        printf("%d is smallest\n",b);
+        printf("%d is the largest\n", a);
+        printf("%d is the smallest\n", b);
     }
-    else if (a<b)
+    else if (a < b)
     {
-        printf("%d is the largest\n",b);
-        printf("%d is the smallest\n",a);
+        printf("%d is the largest\n", b);
+        printf("%d is the smallest\n", a);
     }
     else
     {
-        printf("both are equal");
+        printf("Both are equal\n");
     }
 }
-void modify()
-{ 
-    a= ++a;
-    b= ++b;
-    printf("inside modify() a=%d\n",a);
-    printf("inside modify() b=%d\n",b);
-    
-}
-int main()
-{#include <stdio.h>
-int a,b;
-void compare()
-{
-    if (a>b)
-    {
-        printf("%d is the largest\n",a);
-        printf("%d is smallest\n",b);
-    }
-    else if (a<b)
-    {
-        printf("%d is the largest\n",b);
-        printf("%d is the smallest\n",a);
-    }
-    else
-    {
-        printf("both are equal");
-    }
-}
+
 void modify()
 {
-    printf("inside modify() a=%d\n",a);
-    printf("inside modify() b=%d\n",b);
-    
+    a++;
+    b++;
+
+    printf("Inside modify() a = %d\n", a);
+    printf("Inside modify() b = %d\n", b);
 }
+
 int main()
 {
-    printf("enter two values:");
-    scanf("%d %d",&a,&b);
+    printf("Enter two values: ");
+    scanf("%d %d", &a, &b);
+
     modify();
     compare();
-    
-}
-    printf("enter two values:");
-    scanf("%d %d",&a,&b);
-    compare();
-    modify();
-    
+
+    return 0;
 }
